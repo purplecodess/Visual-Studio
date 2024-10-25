@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Baby's Birthday Surprise</title>
+    <style>
+        body {
+            font-family: Comic Sans MS, cursive;
+            font-size: medium;
+            padding: 15px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            background: blueviolet;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            color: whitesmoke;
+            background-color: blueviolet;
+            border: none;
+            border-radius: 80px;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showAnswers(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var memory = document.getElementById("memory").value;
+            var destination = document.getElementById("destination").value;
+            var gift = document.getElementById("gift").value;
+            var met = document.getElementById("met").value;
+            var date = document.getElementById("date").value;
+            var dream = document.getElementById("dream").value;
+
+            // Display the answers in a new section
+            document.getElementById("answers").innerHTML = `
+                <h2>Your Responses:</h2>
+                <p><strong>Favorite Memory Together:</strong> ${memory}</p>
+                <p><strong>Dream Destination:</strong> ${destination}</p>
+                <p><strong>Favorite Gift:</strong> ${gift}</p>
+                <p><strong>How We Met:</strong> ${met}</p>
+                <p><strong>Favorite Date Activity:</strong> ${date}</p>
+                <p><strong>Future Dream:</strong> ${dream}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>My baby's surprise on her birthday!</h1>
+
+    <!-- First image (uploaded image) -->
+    <img src="unnamed.jpg" alt="Birthday Surprise">
+
+    <p>
+        <b>To My Dearest Wifey To Be And My Beloved Girlfriend,</b><br>
+        Happy birthday, my love 🎉💖. Today, on 30<sup>th</sup> September 2024, I get to celebrate not just the day you were born,
+        but the beautiful soul that you are, someone who fills my life with joy, warmth, and so much love.
+        Watching you grow and shine in everything you do is one of my greatest joys. 
+        On this special day, I hope you know how cherished and adored you are, not just today, but every single day. 
+        You make my world brighter with your smile, and I can't imagine a life without you in it.<br><br>
+
+        And as if today wasn’t special enough, we also get to celebrate our two-year anniversary.💕 Two incredible years of laughter, 
+        adventures, late-night talks, and a love that grows deeper every single day. 
+        From our first moments together to the countless memories we've shared since, you’ve become my confidant, 
+        my greatest supporter, and the person who holds my heart.<br><br>
+
+        Looking back, I see how far we’ve come together, and looking forward, I see nothing but endless possibilities with you by my side. 
+        You’ve made every day feel like an adventure, and I’m so grateful for every moment we’ve shared and every lesson we’ve learned. 
+        Here’s to the love we've built, the memories we’ve created, and the countless adventures that still lie ahead.<br><br>
+
+        Thank you for being you, for loving me in your own unique and beautiful way. 
+        Here's to many more birthdays, anniversaries, and milestones to come. 
+        I can’t wait to celebrate them all with you.<br><br>
+
+        Wishing you a birthday as beautiful as your heart and an anniversary filled with endless love.<br><br>
+
+        With all my heart, forever and always,<br>
+        <b>bebez</b> 😘💕🎂
+    </p>
+
+    <!-- Second image, using the Google Drive link -->
+    <img src="D:\IMG-20240304-WA0014.jpg" alt="Anniversary Celebration">
+
+    <form onsubmit="showAnswers(event)">
+        <div>
+            <label for="memory">1. Favorite memory together: </label>
+            <input type="text" id="memory" name="memory"><br><br>
+        </div>
+
+        <div>
+            <label for="destination">2. Dream destination: </label>
+            <input type="text" id="destination" name="destination"><br><br>
+        </div>
+
+        <div>
+            <label for="gift">3. Favorite gift: </label>
+            <input type="text" id="gift" name="gift"><br><br>
+        </div>
+
+        <div>
+            <label for="met">4. How we met: </label>
+            <input type="text" id="met" name="met"><br><br>
+        </div>
+
+        <div>
+            <label for="date">5. Favorite date activity: </label>
+            <input type="text" id="date" name="date"><br><br>
+        </div>
+
+        <div>
+            <label for="dream">6. Future dream: </label>
+            <input type="text" id="dream" name="dream"><br><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="answers"></div>
+
+</body>
+<footer><strong>written by me, your baby 😘😘</strong></footer>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity Bank</title>
+</head>
+<body>
+
+<script>
+    const functionalities = ['Withdraw', 'Deposit', 'Check Balance', 'Transaction History'];
+    const option_1 = 'yes';
+    const option_2 = 'Thank you for using Equity Bank, Welcome always.';
+    const duration = ['1 Month', '3 Months', '6 Months', '12 Months', '2 Years'];
+    const function1 = ['Agent', 'ATM'];
+    const function2 = ['Direct Deposit', 'Bank Transfer'];
+    const stored_pin = '1234';
+
+    alert('Welcome to Equity Bank');
+    let prompt = prompt('Dear customer, would you like to continue to the main menu? (yes/no):').toLowerCase();
+
+    if (prompt === option_1) {
+        let funcOptions = 'Please choose one of the following options:\n';
+        functionalities.forEach((func, index) => {
+            funcOptions += `${index + 1}. ${func}\n`;
+        });
+        let choice = parseInt(prompt(funcOptions));
+
+        if (choice === 1) {  // Withdrawal
+            alert(`You chose ${functionalities[0]}`);
+            let withdrawOptions = 'Please choose your withdrawal method:\n';
+            function1.forEach((method, index) => {
+                withdrawOptions += `${index + 1}. ${method}\n`;
+            });
+            let withdrawal_method = parseInt(prompt(withdrawOptions));
+
+            if (withdrawal_method >= 1 && withdrawal_method <= function1.length) {
+                let pin = prompt('Enter PIN to withdraw:');
+                if (pin === stored_pin) {
+                    alert(`Withdrawal process initiated via ${function1[withdrawal_method - 1]}.`);
+                } else {
+                    alert('Invalid PIN. Transaction aborted.');
+                }
+            } else {
+                alert('Invalid withdrawal method. Please try again.');
+            }
+        } else if (choice === 2) {  // Deposit
+            alert(`You chose ${functionalities[1]}`);
+            let depositOptions = 'Please choose your deposit method:\n';
+            function2.forEach((method, index) => {
+                depositOptions += `${index + 1}. ${method}\n`;
+            });
+            let deposit_method = parseInt(prompt(depositOptions));
+            let amount = parseFloat(prompt('Enter the amount to deposit:'));
+            alert(`Deposit of ${amount} initiated via ${function2[deposit_method - 1]}.`);
+        } else if (choice === 3) {  // Check Balance
+            let pin = prompt('Enter PIN to check balance:');
+            if (pin === stored_pin) {
+                alert('Checking balance... Your balance is...');
+            } else {
+                alert('Invalid PIN. Try again!');
+            }
+        } else if (choice == 4) {  // Transaction History
+            let transactOptions = 'Please choose your transaction period:\n';
+            duration.forEach((period, index) => {
+                transactOptions += `${index + 1}. ${period}\n`;
+            });
+            let transact_duration = parseInt(prompt(transactOptions));
+            if (transact_duration >= 1 && transact_duration <= duration.length) {
+                alert(`Transaction history for the last ${duration[transact_duration - 1]}:`);
+            } else {
+                alert('Invalid input. Try again!');
+            }
+        } else {
+            alert('Invalid choice. Try again!');
+        }
+    } else {
+        alert(option_2);
+    }
+</script>
+
+</body>
+</html>

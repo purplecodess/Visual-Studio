@@ -1,0 +1,6 @@
+<form>
+<select name="color">
+<option>Red</option>
+<option>Blue</option>
+</select>
+</form>

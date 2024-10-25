@@ -1,0 +1,54 @@
+body {
+    font-family: Comic Sans MS, cursive;
+    font-size: medium;
+    padding: 15px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 30%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    max-width: 800px;
+    margin: 10px auto;
+    background: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    color: whitesmoke;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 80px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+#answers {
+    margin-top: 20px;
+}
